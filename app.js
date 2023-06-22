@@ -22,7 +22,7 @@ app.get("/run", async (req, res, next) => {
       res.write(`data: ${JSON.stringify(data)}\n\n</br>`);
     };
     res.setHeader("Content-Type", "text/html");
-
+    res.write(`Logging Initiated please wait...</br>`);
     // Handles the main functionality of Email reply
     // Run respondToEmails in random interval of defined period
     const interval = setInterval(async () => {
